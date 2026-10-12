@@ -1,0 +1,72 @@
+.jump-stage {
+  position: relative;
+}
+
+.stage canvas {
+  cursor: pointer;
+}
+
+.jump-score {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(232, 224, 212, 0.9);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.jump-combo {
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #e0c060;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.jump-combo.visible {
+  opacity: 1;
+}
+
+.jump-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 7, 6, 0.55);
+  border-radius: 18px;
+  z-index: 3;
+  backdrop-filter: blur(4px);
+}
+
+.jump-overlay[hidden] {
+  display: none;
+}
+
+.jump-over-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+}
+
+.jump-over-score {
+  margin: 0 0 20px;
+  font-size: 15px;
+  color: rgba(232, 224, 212, 0.65);
+}
+
+.jump-over-score span {
+  color: #e0c060;
+  font-size: 20px;
+}

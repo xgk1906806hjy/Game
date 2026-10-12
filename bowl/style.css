@@ -1,0 +1,7 @@
+.stage canvas {
+  cursor: grab;
+}
+
+.stage canvas:active {
+  cursor: grabbing;
+}

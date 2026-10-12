@@ -1,0 +1,48 @@
+.burn-stage {
+  position: relative;
+}
+
+.burn-note {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  width: min(58%, 340px);
+  height: min(42%, 220px);
+  resize: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #2a241c;
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 8px;
+  z-index: 2;
+  -webkit-user-select: text;
+  user-select: text;
+  touch-action: auto;
+}
+
+.burn-note::placeholder {
+  color: rgba(42, 36, 28, 0.35);
+}
+
+.burn-note.hidden {
+  display: none;
+}
+
+.burn-ignite {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 3;
+}
+
+.burn-ignite.hidden {
+  display: none;
+}
+
+.stage canvas {
+  cursor: default;
+}

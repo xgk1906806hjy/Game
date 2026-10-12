@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>弹珠落钉</title>
+    <link rel="stylesheet" href="../shared/base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room">
+      <header class="room-header">
+        <h1 class="room-title">弹珠落钉</h1>
+        <div class="room-nav">
+          <a class="room-link" href="../">房间</a>
+          <button class="room-btn" id="again" type="button">清空</button>
+        </div>
+      </header>
+      <div class="stage">
+        <canvas id="c"></canvas>
+      </div>
+      <p class="room-hint">点顶部任意位置，落下彩色弹珠</p>
+    </div>
+    <script src="../shared/audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

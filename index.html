@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>安静房间</title>
+    <link rel="stylesheet" href="shared/base.css" />
+    <style>
+      body {
+        overflow: auto;
+      }
+
+      .hub {
+        min-height: 100%;
+        padding: 48px 24px 64px;
+        max-width: 920px;
+        margin: 0 auto;
+      }
+
+      .hub-title {
+        margin: 0 0 8px;
+        font-size: 28px;
+        font-weight: 500;
+        letter-spacing: 0.12em;
+      }
+
+      .hub-sub {
+        margin: 0 0 36px;
+        color: rgba(232, 224, 212, 0.5);
+        font-size: 14px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        display: block;
+        padding: 22px 20px 20px;
+        border-radius: 16px;
+        background: linear-gradient(160deg, #1a1713 0%, #12100d 100%);
+        border: 1px solid rgba(232, 224, 212, 0.1);
+        transition: border-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .card:hover {
+        border-color: rgba(232, 224, 212, 0.35);
+        transform: translateY(-2px);
+      }
+
+      .card-name {
+        margin: 0 0 8px;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .card-desc {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.55;
+        color: rgba(232, 224, 212, 0.55);
+      }
+
+      .card-tag {
+        display: inline-block;
+        margin-top: 14px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        color: rgba(232, 224, 212, 0.35);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="hub">
+      <h1 class="hub-title">安静房间</h1>
+      <p class="hub-sub">十二件小玩具。大多没有分数；跳一跳除外。</p>
+      <div class="grid">
+        <a class="card" href="bowl/">
+          <h2 class="card-name">颂钵</h2>
+          <p class="card-desc">沿碗口画圈。圈得越稳，泛音越干净。</p>
+          <span class="card-tag">听</span>
+        </a>
+        <a class="card" href="kintsugi/">
+          <h2 class="card-name">金缮</h2>
+          <p class="card-desc">轻轻一按，瓷器裂开，金线沿裂缝长满。</p>
+          <span class="card-tag">裂 · 修</span>
+        </a>
+        <a class="card" href="peel/">
+          <h2 class="card-name">一卷果皮</h2>
+          <p class="card-desc">按住往下拖，拉出一条不断的皮带。</p>
+          <span class="card-tag">连续</span>
+        </a>
+        <a class="card" href="glass/">
+          <h2 class="card-name">哈气玻璃</h2>
+          <p class="card-desc">抹开雾气，看看窗后的雨与猫。</p>
+          <span class="card-tag">擦</span>
+        </a>
+        <a class="card" href="cables/">
+          <h2 class="card-name">理线</h2>
+          <p class="card-desc">把缠在一起的线收成一束，扣上插座。</p>
+          <span class="card-tag">整齐</span>
+        </a>
+        <a class="card" href="film/">
+          <h2 class="card-name">薄膜</h2>
+          <p class="card-desc">拉出一层肥皂膜，看见彩虹，拉过头就破。</p>
+          <span class="card-tag">拉</span>
+        </a>
+        <a class="card" href="burn/">
+          <h2 class="card-name">写下再烧掉</h2>
+          <p class="card-desc">写下今天的烦心事，点一角，看它化成灰。</p>
+          <span class="card-tag">释放</span>
+        </a>
+        <a class="card" href="marble/">
+          <h2 class="card-name">弹珠落钉</h2>
+          <p class="card-desc">点一下，看彩色弹珠撞钉弹跳，落入槽里。</p>
+          <span class="card-tag">弹</span>
+        </a>
+        <a class="card" href="harp/">
+          <h2 class="card-name">竖琴</h2>
+          <p class="card-desc">手指扫过琴弦，弦会振动发光。</p>
+          <span class="card-tag">扫</span>
+        </a>
+        <a class="card" href="sling/">
+          <h2 class="card-name">弹弓打罐</h2>
+          <p class="card-desc">拉弹弓射纸团，把架子上的罐子打翻。</p>
+          <span class="card-tag">射</span>
+        </a>
+        <a class="card" href="drums/">
+          <h2 class="card-name">击鼓</h2>
+          <p class="card-desc">点不同鼓面，听高低，看鼓皮回弹。</p>
+          <span class="card-tag">敲</span>
+        </a>
+        <a class="card" href="jump/">
+          <h2 class="card-name">跳一跳</h2>
+          <p class="card-desc">按住蓄力，松手起跳。落在中心有连击加分。</p>
+          <span class="card-tag">跳</span>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

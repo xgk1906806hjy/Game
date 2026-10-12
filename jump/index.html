@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>跳一跳</title>
+    <link rel="stylesheet" href="../shared/base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room">
+      <header class="room-header">
+        <h1 class="room-title">跳一跳</h1>
+        <div class="room-nav">
+          <a class="room-link" href="../">房间</a>
+          <button class="room-btn" id="again" type="button">再来一次</button>
+        </div>
+      </header>
+      <div class="stage jump-stage">
+        <canvas id="c"></canvas>
+        <div class="jump-score" id="score">0</div>
+        <div class="jump-combo" id="combo"></div>
+        <div class="jump-overlay" id="overlay" hidden>
+          <p class="jump-over-title">掉下去了</p>
+          <p class="jump-over-score">得分 <span id="final">0</span></p>
+          <button class="room-btn" id="retry" type="button">再跳一次</button>
+        </div>
+      </div>
+      <p class="room-hint">按住蓄力，松手起跳。落在中心有额外分</p>
+    </div>
+    <script src="../shared/audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

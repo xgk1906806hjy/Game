@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>击鼓</title>
+    <link rel="stylesheet" href="../shared/base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room">
+      <header class="room-header">
+        <h1 class="room-title">击鼓</h1>
+        <div class="room-nav">
+          <a class="room-link" href="../">房间</a>
+          <button class="room-btn" id="again" type="button">静下来</button>
+        </div>
+      </header>
+      <div class="stage">
+        <canvas id="c"></canvas>
+      </div>
+      <p class="room-hint">点不同鼓面，听高低与回弹</p>
+    </div>
+    <script src="../shared/audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

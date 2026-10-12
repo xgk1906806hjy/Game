@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>写下再烧掉</title>
+    <link rel="stylesheet" href="../shared/base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room">
+      <header class="room-header">
+        <h1 class="room-title">写下再烧掉</h1>
+        <div class="room-nav">
+          <a class="room-link" href="../">房间</a>
+          <button class="room-btn" id="again" type="button">再写一张</button>
+        </div>
+      </header>
+      <div class="stage burn-stage">
+        <canvas id="c"></canvas>
+        <textarea
+          id="note"
+          class="burn-note"
+          maxlength="200"
+          placeholder="写下今天想放下的事……"
+          spellcheck="false"
+        ></textarea>
+        <button class="room-btn burn-ignite" id="ignite" type="button">点一角</button>
+      </div>
+      <p class="room-status" id="status"></p>
+      <p class="room-hint">文字只留在这一页，不上传，也不保存</p>
+    </div>
+    <script src="../shared/audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
