@@ -275,5 +275,46 @@
     src.stop(now + 0.07);
   };
 
+  RoomAudio.shoot = function () {
+    var c = ensure();
+    if (!c || !master) return;
+    var osc = c.createOscillator();
+    var g = c.createGain();
+    osc.type = "square";
+    osc.frequency.value = 880;
+    g.gain.value = 0.0001;
+    osc.connect(g);
+    g.connect(master);
+    var now = c.currentTime;
+    g.gain.setValueAtTime(0.0001, now);
+    g.gain.exponentialRampToValueAtTime(0.08, now + 0.004);
+    g.gain.exponentialRampToValueAtTime(0.0001, now + 0.06);
+    osc.frequency.exponentialRampToValueAtTime(220, now + 0.06);
+    osc.start(now);
+    osc.stop(now + 0.07);
+  };
+
+  RoomAudio.explode = function () {
+    var c = ensure();
+    if (!c || !master) return;
+    var src = c.createBufferSource();
+    src.buffer = noiseBuffer(0.22);
+    var filter = c.createBiquadFilter();
+    filter.type = "lowpass";
+    filter.frequency.value = 700;
+    var g = c.createGain();
+    g.gain.value = 0.0001;
+    src.connect(filter);
+    filter.connect(g);
+    g.connect(master);
+    var now = c.currentTime;
+    g.gain.setValueAtTime(0.0001, now);
+    g.gain.exponentialRampToValueAtTime(0.32, now + 0.01);
+    g.gain.exponentialRampToValueAtTime(0.0001, now + 0.2);
+    filter.frequency.exponentialRampToValueAtTime(120, now + 0.2);
+    src.start(now);
+    src.stop(now + 0.22);
+  };
+
   global.RoomAudio = RoomAudio;
 })(typeof window !== "undefined" ? window : this);

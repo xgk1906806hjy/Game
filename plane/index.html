@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>飞机打怪</title>
+    <link rel="stylesheet" href="../shared/base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room">
+      <header class="room-header">
+        <h1 class="room-title">飞机打怪</h1>
+        <div class="room-nav">
+          <a class="room-link" href="../">房间</a>
+          <button class="room-btn" id="again" type="button">再来一局</button>
+        </div>
+      </header>
+      <div class="stage plane-stage">
+        <canvas id="c"></canvas>
+        <div class="plane-hud">
+          <div class="plane-score">得分 <span id="score">0</span></div>
+          <div class="plane-lives" id="lives">❤ ❤ ❤</div>
+        </div>
+        <div class="plane-overlay" id="overlay" hidden>
+          <p class="plane-over-title">被撞到了</p>
+          <p class="plane-over-score">得分 <span id="final">0</span></p>
+          <p class="plane-over-best">最高 <span id="best">0</span></p>
+          <button class="room-btn" id="retry" type="button">再飞一次</button>
+        </div>
+      </div>
+      <p class="room-hint">拖动或方向键移动，自动开火。打怪得分，撞到扣命</p>
+    </div>
+    <script src="../shared/audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

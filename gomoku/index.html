@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>五子棋</title>
+    <link rel="stylesheet" href="../shared/base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room">
+      <header class="room-header">
+        <h1 class="room-title">五子棋</h1>
+        <div class="room-nav">
+          <a class="room-link" href="../">房间</a>
+          <button class="room-btn" id="undo" type="button">悔棋</button>
+          <button class="room-btn" id="again" type="button">重开</button>
+        </div>
+      </header>
+      <div class="stage gomoku-stage">
+        <canvas id="c"></canvas>
+        <div class="gomoku-hud">
+          <div class="gomoku-mode" id="modeBar">
+            <button type="button" class="gomoku-chip is-active" data-mode="pvp">双人</button>
+            <button type="button" class="gomoku-chip" data-mode="ai">人机</button>
+          </div>
+          <div class="gomoku-turn" id="turn">黑棋落子</div>
+          <div class="gomoku-score">
+            黑 <span id="blackWins">0</span> · 白 <span id="whiteWins">0</span>
+          </div>
+        </div>
+        <div class="gomoku-overlay" id="overlay" hidden>
+          <p class="gomoku-over-title" id="overTitle">黑棋胜</p>
+          <p class="gomoku-over-sub">再来一盘？</p>
+          <button class="room-btn" id="retry" type="button">再来一局</button>
+        </div>
+      </div>
+      <p class="room-hint">点交叉点落子，先连成五子者胜。人机模式你执黑先行</p>
+    </div>
+    <script src="../shared/audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

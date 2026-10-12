@@ -1,0 +1,102 @@
+.gomoku-stage {
+  position: relative;
+}
+
+.stage canvas {
+  cursor: pointer;
+  background: #1a1612;
+}
+
+.gomoku-hud {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.gomoku-mode {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(20, 16, 12, 0.72);
+  border: 1px solid rgba(232, 224, 212, 0.14);
+  pointer-events: auto;
+  backdrop-filter: blur(8px);
+}
+
+.gomoku-chip {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: rgba(232, 224, 212, 0.55);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.gomoku-chip.is-active {
+  background: rgba(200, 160, 90, 0.28);
+  color: #e8d5a8;
+}
+
+.gomoku-turn,
+.gomoku-score {
+  font-size: 13px;
+  color: rgba(232, 224, 212, 0.8);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.gomoku-score span {
+  color: #e0c060;
+  font-size: 16px;
+}
+
+.gomoku-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 8, 6, 0.58);
+  border-radius: 18px;
+  z-index: 3;
+  backdrop-filter: blur(4px);
+}
+
+.gomoku-overlay[hidden] {
+  display: none;
+}
+
+.gomoku-over-title {
+  margin: 0 0 8px;
+  font-size: 24px;
+  letter-spacing: 0.12em;
+}
+
+.gomoku-over-sub {
+  margin: 0 0 18px;
+  font-size: 14px;
+  color: rgba(232, 224, 212, 0.55);
+}
+
+@media (max-width: 560px) {
+  .gomoku-hud {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gomoku-score {
+    width: 100%;
+    text-align: center;
+  }
+}

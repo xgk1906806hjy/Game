@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贪吃蛇</title>
+    <link rel="stylesheet" href="../shared/base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="room">
+      <header class="room-header">
+        <h1 class="room-title">贪吃蛇</h1>
+        <div class="room-nav">
+          <a class="room-link" href="../">房间</a>
+          <button class="room-btn" id="recordsBtn" type="button">成绩</button>
+          <button class="room-btn" id="again" type="button">再来一局</button>
+        </div>
+      </header>
+      <div class="stage snake-stage">
+        <canvas id="c"></canvas>
+        <div class="snake-hud">
+          <div class="snake-score">得分 <span id="score">0</span></div>
+          <div class="snake-best">最高 <span id="best">0</span></div>
+        </div>
+        <div class="snake-speed" id="speedBar">
+          <span class="snake-speed-label">速度</span>
+          <button type="button" class="snake-speed-btn" data-speed="0">慢</button>
+          <button type="button" class="snake-speed-btn is-active" data-speed="1">中</button>
+          <button type="button" class="snake-speed-btn" data-speed="2">快</button>
+          <button type="button" class="snake-speed-btn" data-speed="3">极速</button>
+        </div>
+        <div class="snake-overlay" id="overlay" hidden>
+          <p class="snake-over-title" id="overTitle">撞到了</p>
+          <p class="snake-over-score">得分 <span id="final">0</span></p>
+          <p class="snake-over-best">最高 <span id="bestFinal">0</span></p>
+          <button class="room-btn" id="retry" type="button">再来一局</button>
+        </div>
+        <div class="snake-records" id="recordsPanel" hidden>
+          <div class="snake-records-card">
+            <div class="snake-records-head">
+              <h2>成绩记录</h2>
+              <button class="room-btn" id="closeRecords" type="button">关闭</button>
+            </div>
+            <p class="snake-records-best">最高分 <span id="bestPanel">0</span></p>
+            <ul class="snake-records-list" id="recordsList"></ul>
+            <button class="room-btn snake-records-clear" id="clearRecords" type="button">清空记录</button>
+          </div>
+        </div>
+        <div class="snake-pad" id="pad" aria-hidden="true">
+          <button type="button" data-dir="up">↑</button>
+          <div class="snake-pad-mid">
+            <button type="button" data-dir="left">←</button>
+            <button type="button" data-dir="right">→</button>
+          </div>
+          <button type="button" data-dir="down">↓</button>
+        </div>
+      </div>
+      <p class="room-hint">方向键或 WASD 转向；下方可调速度，结束会写入成绩</p>
+    </div>
+    <script src="../shared/audio.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

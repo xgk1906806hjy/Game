@@ -1,0 +1,75 @@
+.plane-stage {
+  position: relative;
+}
+
+.stage canvas {
+  cursor: none;
+  background: #0a1018;
+}
+
+.plane-hud {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: rgba(232, 224, 212, 0.85);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.plane-score span {
+  color: #e0c060;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.plane-lives {
+  color: #e07070;
+  letter-spacing: 0.2em;
+}
+
+.plane-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 10, 16, 0.62);
+  border-radius: 18px;
+  z-index: 3;
+  backdrop-filter: blur(4px);
+}
+
+.plane-overlay[hidden] {
+  display: none;
+}
+
+.plane-over-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+}
+
+.plane-over-score,
+.plane-over-best {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: rgba(232, 224, 212, 0.65);
+}
+
+.plane-over-score span,
+.plane-over-best span {
+  color: #e0c060;
+  font-size: 20px;
+}
+
+.plane-over-best {
+  margin-bottom: 20px;
+}
